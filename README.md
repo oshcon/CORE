@@ -18,46 +18,42 @@
 
 [Discord Support Server](https://discord.gg/PnHveq7)
 
-[My Patreon](https://www.patreon.com/gmemstr?ty=h)
-
 ## Requirements
 
-- [Node.js](https://nodejs.org/en/) >= 7.0.0
+- [Docker](https://docker.io)
 
-- [npm](https://www.npmjs.com/)
-
-- [Java JRE](https://www.java.com/en/) >= 1.7.0
+- **docker-compose** (usually included with Docker)
 
 
 ## Running
 
 Running NodeMC is easy.
 
+**DO NOT RUN `npm install`, INSTEAD REBUILD CONTAINER.**
+
+`docker-compose build` is your friend.
+
 ```bash
 git clone https://github.com/NodeMC/CORE.git NodeMC
 
 cd NodeMC
 
-npm install # yarn install
-
 cp config/config.example.js config/config.js
 
-node server.js
+docker-compose up
+
 ```
 
 Then navigate to `http://localhost:3000` and go through the setup process.
 
-## Contributing
+## Maintainers
 
-### Wall of Fame
+| [![Jared Allard](https://avatars.githubusercontent.com/u/2391349?s=130)](https://jaredallard.me/) | [![Mathew Da Costa](https://avatars3.githubusercontent.com/u/1917406?v=4&s=130)](https://github.com/md678685) |
+|---|---|
+|[Jared Allard](https://github.com/jaredallard) | [Mathew Da Costa](https://github.com/md678685) |
 
-[Mathew Da Costa](https://github.com/md678685) for his incredible work on the plugin system
-and for his continued support of NodeMC. :thumbsup:
 
-[Jared Allard](https://github.com/jaredallard) for his immense contributions of rewriting NodeMC
-using ES6 sepcifications. :heart:
-
-Contributions from other developers are welcome, check out [CONTRIBUTING.md](https://github.com/nodemc/core/tree/v6-optimize/.github/CONTRIBUTING.md) before you submit a pull request.
+Contributions from other developers are welcome, check out [CONTRIBUTING.md](https://github.com/nodemc/CORE/tree/master/.github/CONTRIBUTING.md) before you submit a pull request.
 
 ## Credits
 
@@ -65,4 +61,4 @@ Various OSS modules are used in this project, please check `package.json` for th
 
 ## License
 
-GNU GPL3
+MIT
